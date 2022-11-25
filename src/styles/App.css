@@ -4,3 +4,6 @@
 .dark > * {
 	color: black;
 }
+.dark img {
+	filter: invert(115%);
+}
