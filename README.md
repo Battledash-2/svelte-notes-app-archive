@@ -7,7 +7,7 @@ Fully featured using routes in pure Svelte.
 
 ##### Note: the storage system isn't very optimized. Feel free to create a pull request ;)
 
-### 📩 Dependencies;
+### 📩 Dependencies:
 
 -   [bootstrap](https://www.npmjs.com/package/bootstrap)
     Used for styling the site.
@@ -19,3 +19,16 @@ Fully featured using routes in pure Svelte.
     Build/developer tools used to run Svelte.
 -   [uuid](https://www.npmjs.com/package/uuid) Generate note ids easily.
 -   [marked](https://www.npmjs.com/package/marked) Get HTML from markdown text.
+
+### Images:
+
+#### Dashboard:
+
+![Empty Dashboard Image](https://raw.githubusercontent.com/Battledash-2/svelte-notes-app/master/images/dashboard-empty.png)
+![Dashboard Image](https://raw.githubusercontent.com/Battledash-2/svelte-notes-app/master/images/dashboard.png)
+
+#### Notes:
+
+![Create Note Image](https://raw.githubusercontent.com/Battledash-2/svelte-notes-app/master/images/create-note.png)
+![Edit Note Image](https://raw.githubusercontent.com/Battledash-2/svelte-notes-app/master/images/edit-note.png)
+![View Note Image](https://raw.githubusercontent.com/Battledash-2/svelte-notes-app/master/images/view-note.png)
