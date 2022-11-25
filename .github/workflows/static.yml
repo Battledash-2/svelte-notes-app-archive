@@ -2,7 +2,7 @@
 name: Deploy static content to Pages
 
 ---
-permalink: /index.html
+permalink: /404.html
 ---
 
 on:
