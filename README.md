@@ -2,6 +2,8 @@
 
 ### Basic CRUD application for Svelte.
 
+Try it [here](https://battledash-2.github.io/svelte-notes-app/)!
+
 Create notes, delete notes, edit notes, and view notes.
 Fully featured using routes in pure Svelte.
 
