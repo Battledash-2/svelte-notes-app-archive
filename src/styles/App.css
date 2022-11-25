@@ -1,4 +1,6 @@
 .dark {
 	filter: invert(0.85);
-	color: white;
+}
+.dark > * {
+	color: black;
 }
