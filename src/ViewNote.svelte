@@ -10,7 +10,7 @@
 
 	function deleteNote() {
 		modify('notes', (prev) => prev.filter((n) => n.id !== noteId), []);
-		navigate('../../');
+		navigate('../');
 	}
 </script>
 
