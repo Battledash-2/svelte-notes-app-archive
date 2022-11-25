@@ -18,13 +18,13 @@
 	<div class="mb-3 d-flex">
 		<h2>{note.title}</h2>
 		<div class="ms-auto">
-			<Link to={`../../edit/${note.id}`}>
+			<Link to={`../edit/${note.id}`}>
 				<button class="btn btn-primary">Edit</button>
 			</Link>
 			<button on:click={deleteNote} class="btn btn-outline-danger"
 				>Delete</button
 			>
-			<Link to="../../">
+			<Link to="../">
 				<button class="btn btn-outline-secondary">Back</button>
 			</Link>
 		</div>
