@@ -25,6 +25,13 @@
 	}
 
 	updateTheme();
+
+	const urlState = sessionStorage.getItem('oldUrl');
+	if (urlState) {
+		console.log('detected state');
+		history.pushState(null, null, urlState);
+		sessionStorage.removeItem('oldUrl');
+	}
 </script>
 
 <Router>
