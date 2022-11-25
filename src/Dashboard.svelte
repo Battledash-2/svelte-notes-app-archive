@@ -22,7 +22,7 @@
 	<div class="d-flex">
 		<h2>Notes</h2>
 		<div class="ms-auto">
-			<Link to="/new">
+			<Link to="./new">
 				<button class="btn btn-primary">New Note</button>
 			</Link>
 		</div>
