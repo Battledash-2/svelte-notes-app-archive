@@ -22,11 +22,10 @@
 	<div class="mb-3 d-flex">
 		<h2>Create Note</h2>
 		<div class="ms-auto">
-			<button on:click={click} class="btn btn-sm btn-primary">Save</button
-			>
+			<button on:click={click} class="btn btn-primary">Save</button>
 			<!-- <button class="btn btn-sm btn-outline-danger">Delete</button> -->
 			<Link to="../">
-				<button class="btn btn-sm btn-outline-secondary">Cancel</button>
+				<button class="btn btn-outline-secondary">Cancel</button>
 			</Link>
 		</div>
 	</div>

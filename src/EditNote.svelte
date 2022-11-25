@@ -30,11 +30,10 @@
 	<div class="mb-3 d-flex">
 		<h2>Edit Note</h2>
 		<div class="ms-auto">
-			<button on:click={click} class="btn btn-sm btn-primary">Save</button
-			>
-			<!-- <button class="btn btn-sm btn-outline-danger">Delete</button> -->
+			<button on:click={click} class="btn btn-primary">Save</button>
+			<!-- <button class="btn btn-outline-danger">Delete</button> -->
 			<Link to="../">
-				<button class="btn btn-sm btn-outline-secondary">Cancel</button>
+				<button class="btn btn-outline-secondary">Cancel</button>
 			</Link>
 		</div>
 	</div>

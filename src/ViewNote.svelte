@@ -19,13 +19,13 @@
 		<h2>{note.title}</h2>
 		<div class="ms-auto">
 			<Link to={`/edit/${note.id}`}>
-				<button class="btn btn-sm btn-primary">Edit</button>
+				<button class="btn btn-primary">Edit</button>
 			</Link>
-			<button on:click={deleteNote} class="btn btn-sm btn-outline-danger"
+			<button on:click={deleteNote} class="btn btn-outline-danger"
 				>Delete</button
 			>
 			<Link to="/">
-				<button class="btn btn-sm btn-outline-secondary">Back</button>
+				<button class="btn btn-outline-secondary">Back</button>
 			</Link>
 		</div>
 	</div>
