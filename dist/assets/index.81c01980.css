@@ -1,4 +1,4 @@
-@charset "UTF-8";.card{transition:translate ease-in-out .1s,box-shadow ease-in-out .1s}.card:hover,.card:focus{translate:0 -2px;box-shadow:0 2px 2px #0003}/*!
+@charset "UTF-8";.card{transition:translate ease-in-out .1s,box-shadow ease-in-out .1s}.card:hover,.card:focus{translate:0 -2px;box-shadow:0 2px 2px #0003}.dark{filter:invert(.85);color:#fff}/*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.

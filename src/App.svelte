@@ -5,7 +5,23 @@
 	import CreateNote from './CreateNote.svelte';
 	import Dashboard from './Dashboard.svelte';
 	import EditNote from './EditNote.svelte';
+	import { setTheme, Theme } from './helpers/theme';
 	import ViewNote from './ViewNote.svelte';
+
+	import './styles/App.css';
+
+	function switchTheme() {
+		if ($Theme == true) setTheme(false);
+		else setTheme(true);
+	}
+
+	$: {
+		if ($Theme) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	}
 </script>
 
 <Router>
@@ -16,4 +32,13 @@
 
 		<Route index component={Dashboard} />
 	</div>
+	<button
+		style={`
+			position: absolute;
+			right: 2rem;
+			bottom: 2rem;
+		`}
+		class="btn btn-primary"
+		on:click={switchTheme}>Theme</button
+	>
 </Router>
