@@ -17,7 +17,7 @@
 				}),
 			[]
 		);
-		navigate('/');
+		navigate('../');
 	}
 </script>
 

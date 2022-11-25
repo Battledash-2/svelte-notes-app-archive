@@ -43,7 +43,7 @@
 				<Link
 					style="color: inherit;"
 					class="text-decoration-none"
-					to={`/view/${note.id}`}
+					to={`./view/${note.id}`}
 				>
 					<div class="card text-decoration-none h-100 col">
 						<div
