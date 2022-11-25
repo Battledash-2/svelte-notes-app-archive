@@ -10,9 +10,9 @@
 
 <Router>
 	<div class="container py-4 px-3 mx-auto">
-		<Route path="/new" component={CreateNote} />
-		<Route path="/view/:noteId" component={ViewNote} />
-		<Route path="/edit/:noteId" component={EditNote} />
+		<Route path="*/new" component={CreateNote} />
+		<Route path="*/view/:noteId" component={ViewNote} />
+		<Route path="*/edit/:noteId" component={EditNote} />
 
 		<Route index component={Dashboard} />
 	</div>

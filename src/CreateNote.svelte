@@ -7,12 +7,15 @@
 	let title = '';
 
 	function click() {
-		update('notes', (prev) =>
-			prev.push({
-				id: v4(),
-				title,
-				content,
-			})
+		update(
+			'notes',
+			(prev) =>
+				prev.push({
+					id: v4(),
+					title,
+					content,
+				}),
+			[]
 		);
 		navigate('/');
 	}

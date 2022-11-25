@@ -11,16 +11,19 @@
 	let title = note.title || '???';
 
 	function click() {
-		modify('notes', (prev) =>
-			prev.map((n) =>
-				n.id === noteId
-					? {
-							...n,
-							title,
-							content,
-					  }
-					: n
-			)
+		modify(
+			'notes',
+			(prev) =>
+				prev.map((n) =>
+					n.id === noteId
+						? {
+								...n,
+								title,
+								content,
+						  }
+						: n
+				),
+			[]
 		);
 		navigate('/');
 	}
