@@ -25,7 +25,7 @@
 				),
 			[]
 		);
-		navigate('./');
+		navigate('../');
 	}
 </script>
 
@@ -35,7 +35,7 @@
 		<div class="ms-auto">
 			<button on:click={click} class="btn btn-primary">Save</button>
 			<!-- <button class="btn btn-outline-danger">Delete</button> -->
-			<Link to="./">
+			<Link to="../">
 				<button class="btn btn-outline-secondary">Cancel</button>
 			</Link>
 		</div>
