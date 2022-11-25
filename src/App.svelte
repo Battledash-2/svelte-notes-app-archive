@@ -16,7 +16,7 @@
 	}
 
 	$: {
-		if ($Theme) {
+		if (!$Theme) {
 			document.documentElement.classList.add('dark');
 		} else {
 			document.documentElement.classList.remove('dark');
