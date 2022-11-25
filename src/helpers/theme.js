@@ -6,7 +6,7 @@ import storage from './storage';
 
 export const Theme = writable(false);
 
-let ls = storage.get('theme', 'false');
+let ls = storage.get('theme', false);
 Theme.set(ls);
 
 export function setTheme(bool) {

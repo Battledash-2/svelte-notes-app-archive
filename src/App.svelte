@@ -13,15 +13,18 @@
 	function switchTheme() {
 		if ($Theme == true) setTheme(false);
 		else setTheme(true);
+		updateTheme();
 	}
 
-	$: {
-		if (!$Theme) {
+	function updateTheme() {
+		if ($Theme) {
 			document.documentElement.classList.add('dark');
 		} else {
 			document.documentElement.classList.remove('dark');
 		}
 	}
+
+	updateTheme();
 </script>
 
 <Router>
