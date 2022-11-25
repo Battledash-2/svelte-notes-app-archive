@@ -35,13 +35,13 @@
 
 		<Route index component={Dashboard} />
 	</div>
-	<button
-		style={`
-			position: absolute;
+</Router>
+<button
+	style={`
+			position: fixed;
 			right: 2rem;
 			bottom: 2rem;
 		`}
-		class="btn btn-primary"
-		on:click={switchTheme}>Theme</button
-	>
-</Router>
+	class="btn btn-primary"
+	on:click={switchTheme}>Theme</button
+>
