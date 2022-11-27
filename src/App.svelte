@@ -35,7 +35,7 @@
 	const urlState = location.hash;
 	if (urlState) {
 		console.log('detected state');
-		history.pushState(null, null, urlState.slice(1));
+		history.replaceState(null, null, urlState.slice(1));
 	}
 </script>
 
