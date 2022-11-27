@@ -3,8 +3,8 @@
 	import storage, { modify } from './helpers/storage';
 	import { marked } from 'marked';
 
-	export let options;
-	const { noteId } = options;
+	export let params;
+	const { noteId } = params;
 
 	const note = storage.search('notes', (n) => n.id == noteId, []);
 

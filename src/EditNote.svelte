@@ -2,8 +2,8 @@
 	import { Link, navigate } from 'svroutes';
 	import storage, { modify } from './helpers/storage';
 
-	export let options;
-	const { noteId } = options;
+	export let params;
+	const { noteId } = params;
 
 	const note = storage.search('notes', (n) => n.id === noteId, []);
 
