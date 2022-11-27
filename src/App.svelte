@@ -26,11 +26,16 @@
 
 	updateTheme();
 
-	const urlState = sessionStorage.getItem('oldUrl');
+	// const urlState = sessionStorage.getItem('oldUrl');
+	// if (urlState) {
+	// 	console.log('detected state');
+	// 	history.pushState(null, null, urlState);
+	// 	sessionStorage.removeItem('oldUrl');
+	// }
+	const urlState = location.hash;
 	if (urlState) {
 		console.log('detected state');
-		history.pushState(null, null, urlState);
-		sessionStorage.removeItem('oldUrl');
+		history.pushState(null, null, urlState.slice(1));
 	}
 </script>
 
