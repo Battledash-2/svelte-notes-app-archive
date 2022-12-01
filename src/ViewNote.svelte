@@ -1,7 +1,9 @@
 <script>
 	import { Link, navigate } from 'svroutes';
-	import storage, { modify } from './helpers/storage';
+	import storage, { get, modify } from './helpers/storage';
 	import { marked } from 'marked';
+
+	const tags = get('tags', {});
 
 	export let params;
 	const { noteId } = params;
@@ -14,9 +16,27 @@
 	}
 </script>
 
+<!-- <div class="d-flex hstack justify-content-center gap-1">
+			{#each note.tags || [] as tag}
+				<span class="badge badge-pill bg-primary">
+					{tags[tag] || 'woops'}
+				</span>
+			{/each}
+		</div> -->
+
 <div class="w-100 p-3">
 	<div class="mb-3 d-flex">
-		<h2>{note.title}</h2>
+		<div class="d-flex vstack">
+			<h2>{note.title}</h2>
+			<div class="d-flex hstack justify-content-start gap-1">
+				{#each note.tags || [] as tag}
+					<span class="badge badge-pill bg-primary">
+						{tags[tag] || 'woops'}
+					</span>
+				{/each}
+			</div>
+		</div>
+
 		<div class="ms-auto">
 			<Link to={`../edit/${note.id}`}>
 				<button class="btn btn-primary">Edit</button>

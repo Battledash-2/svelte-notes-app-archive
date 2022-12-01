@@ -12,6 +12,7 @@
 		"@sveltejs/vite-plugin-svelte": "^1.1.0",
 		"svelte": "^3.52.0",
 		"svroutes": "^0.1.36",
+		"svselect": "^1.0.0-types",
 		"vite": "^3.2.3"
 	},
 	"dependencies": {

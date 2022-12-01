@@ -1,10 +1,30 @@
 <script>
+	import { onMount } from 'svelte';
 	import { Link, navigate } from 'svroutes';
-	import { update } from './helpers/storage';
+	import { Select } from 'svselect';
 	import { v4 } from 'uuid';
+	import { get, modify, update } from './helpers/storage';
 
 	let content = '';
 	let title = '';
+
+	let selected;
+	/** @type {import('svelte/store').Writable} */
+	let selectedStore;
+
+	onMount(() => {
+		selectedStore.subscribe((v) => (selected = v));
+	});
+
+	let tags = get('tags', {});
+	let options = [];
+
+	Object.keys(tags).forEach(function (key) {
+		options.push({
+			label: tags[key],
+			key,
+		});
+	});
 
 	function click() {
 		update(
@@ -14,9 +34,19 @@
 					id: v4(),
 					title,
 					content,
+					tags: selected.map((c) => c.key),
 				}),
 			[]
 		);
+		if (selected && selected.length > 0) {
+			let tags = selected;
+			const obj = {};
+			tags.map((o) => {
+				obj[o.key] = o.label;
+			});
+
+			modify('tags', (prev) => ({ ...prev, ...obj }), {});
+		}
 		navigate('./');
 	}
 </script>
@@ -32,11 +62,34 @@
 			</Link>
 		</div>
 	</div>
-	<input
-		bind:value={title}
-		class="form-control w-100 mb-2"
-		placeholder="Title"
-	/>
+	<div class="d-flex gap-2">
+		<div style="flex: 1; height: 100%;">
+			<input
+				bind:value={title}
+				class="form-control w-100 mb-2"
+				placeholder="Title"
+			/>
+		</div>
+		<div style="flex: 1; height: 100%;">
+			<Select
+				bind:selected={selectedStore}
+				onChange={(_, newV) =>
+					// @ts-ignore
+					newV.custom
+						? {
+								// @ts-ignore
+								label: newV.label,
+								key: v4(),
+						  }
+						: newV}
+				allowcreate
+				multiple
+				hideselected
+				{options}
+				placeholder="Tags"
+			/>
+		</div>
+	</div>
 	<textarea
 		bind:value={content}
 		class="form-control w-100"
