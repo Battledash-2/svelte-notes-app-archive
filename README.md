@@ -1,5 +1,7 @@
 # 📝 Svelte Note Application
 
+# Public archive / see updated: https://github.com/Battledash-2/notes-app
+
 ### Basic CRUD application for Svelte.
 
 Try it [here](https://battledash-2.github.io/svelte-notes-app/)!
